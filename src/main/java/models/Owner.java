@@ -11,8 +11,9 @@ import java.util.List;
         private int id;
         private String name;
         private String userName;
+        private List<Folder> folders;
 
-        public Owner() {
+        public Owner(String name, String userName) {
         }
 
 
@@ -46,6 +47,14 @@ import java.util.List;
 
         public void setUserName(String userName) {
             this.userName = userName;
+        }
+        @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+        public List<Folder> getFolders() {
+            return folders;
+        }
+
+        public void setFolders(List<Folder> folders) {
+            this.folders = folders;
         }
     }
 
