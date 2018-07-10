@@ -11,13 +11,13 @@ public class Runner {
         Folder folder = new Folder("Pictures");
         DBHelper.save(folder);
 
-        File file1 = new File("Holiday", "jpg", 10);
+        File file1 = new File("Holiday", "jpg", 10, folder);
         DBHelper.save(file1);
 
-        File file2 = new File("Java project", "java", 120);
+        File file2 = new File("Java project", "java", 120, folder);
         DBHelper.save(file2);
 
-        File file3 = new File("Movies", "mpg4", 1500);
+        File file3 = new File("Movies", "mpg4", 1500, folder);
         DBHelper.save(file3);
 
 

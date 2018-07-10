@@ -15,7 +15,7 @@ public class File {
         public File() {
         }
 
-        public File(String name, String extention, double size) {
+        public File(String name, String extention, double size, Folder folder) {
             this.name = name;
             this.extention = extention;
             this.size = size;
