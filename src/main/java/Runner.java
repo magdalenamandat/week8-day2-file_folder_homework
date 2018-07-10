@@ -1,3 +1,4 @@
+import db.DBFolder;
 import db.DBHelper;
 import models.File;
 import models.Folder;
@@ -26,5 +27,6 @@ public class Runner {
 
         List<File> files = DBHelper.getAll(File.class);
 
+        List<File> folderFiles = DBFolder.getFilesInFolder(folder1);
     }
 }
