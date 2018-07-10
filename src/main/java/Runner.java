@@ -21,7 +21,7 @@ public class Runner {
         DBHelper.save(file3);
 
 
-        List<File> files = DBFile.getAll();
+        List<File> files = DBHelper.getAll(File.class);
 
     }
 }

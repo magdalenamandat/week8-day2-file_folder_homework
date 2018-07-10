@@ -1,16 +1,16 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Files")
 public class File {
 
         private int id;
         private String name;
         private String extention;
         private double size;
+        private Folder folder;
 
         public File() {
         }
@@ -19,6 +19,7 @@ public class File {
             this.name = name;
             this.extention = extention;
             this.size = size;
+            this.folder = folder;
         }
 
     @Column(name = "name")
@@ -57,5 +58,15 @@ public class File {
 
     public void setExtention(String extention) {
         this.extention = extention;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "folder_id", nullable = false)
+    public Folder getFolder() {
+        return folder;
+    }
+
+    public void setFolder(Folder folder) {
+        this.folder = folder;
     }
 }
