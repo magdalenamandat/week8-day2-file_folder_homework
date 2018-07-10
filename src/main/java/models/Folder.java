@@ -44,13 +44,13 @@ public class Folder {
         {
             this.title = title;
         }
-    @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
-    public List<File> getFiles() {
-        return files;
-    }
+        @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
+        public List<File> getFiles() {
+            return files;
+        }
 
-    public void setFiles(List<File> files) {
-        this.files = files;
-    }
+        public void setFiles(List<File> files) {
+            this.files = files;
+        }
 }
 
