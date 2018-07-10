@@ -3,7 +3,6 @@ package models;
 import javax.persistence.*;
 import java.util.List;
 
-public class Owner {
     @Entity
     @Table(name = "owners")
     public class Owner {
@@ -51,4 +50,4 @@ public class Owner {
     }
 
 
-}
+
