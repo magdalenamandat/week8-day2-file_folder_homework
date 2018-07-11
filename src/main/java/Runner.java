@@ -12,11 +12,12 @@ public class Runner {
     public static void main(String[] args) {
 
         Owner owner1 = new Owner("Magda", "Mandacik");
+        DBHelper.save(owner1);
 
-        Folder folder1 = new Folder("Pictures", "Magda");
+        Folder folder1 = new Folder("Pictures", owner1);
         DBHelper.save(folder1);
 
-        Folder folder2 = new Folder("Studies", "Magda");
+        Folder folder2 = new Folder("Studies",owner1);
         DBHelper.save(folder2);
 
         File file1 = new File("Holiday", "jpg", 10, folder1);

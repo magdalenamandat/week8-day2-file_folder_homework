@@ -14,9 +14,6 @@ public class Folder {
         private List<File> files;
         private Owner owner;
 
-        public Folder(String title, String owner) {
-        }
-
 
         public Folder(String title, Owner owner) {
             this.title = title;

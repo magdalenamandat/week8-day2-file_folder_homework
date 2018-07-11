@@ -24,7 +24,9 @@ public class DBFolder {
             results = cr.list();
         }
         catch(HibernateException ex) {
+          //  transaction.rollback();
             ex.printStackTrace();
+
         }
         finally {
             session.close();
